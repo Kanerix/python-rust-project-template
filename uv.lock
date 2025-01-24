@@ -60,17 +60,16 @@ source = { editable = "." }
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
+]
+lint = [
     { name = "ruff" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "python-rust-project-template" }]
 
 [package.metadata.requires-dev]
-dev = [
-    { name = "pytest" },
-    { name = "ruff" },
-]
+dev = [{ name = "pytest" }]
+lint = [{ name = "ruff" }]
 
 [[package]]
 name = "ruff"

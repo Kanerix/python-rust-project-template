@@ -1,20 +1,13 @@
 [project]
 name = "python-rust-project-template"
 requires-python = ">=3.11"
-classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python",
-]
+classifiers = ["Programming Language :: Rust", "Programming Language :: Python"]
 dynamic = ["version"]
-dependencies = [
-    "python_rust_project_template",
-]
+dependencies = []
 
 [dependency-groups]
-dev = [
-    "pytest",
-    "ruff",
-]
+dev = ["pytest"]
+lint = ["ruff"]
 
 [tool.maturin]
 module-name = "python_rust_project_template"
@@ -26,7 +19,7 @@ build-backend = "maturin"
 
 [tool.uv]
 cache-keys = [
-    {file = "pyproject.toml"},
-    {file = "rust/Cargo.toml"},
-    {file = "**/*.rs"}
+    { file = "pyproject.toml" },
+    { file = "Cargo.toml" },
+    { file = "**/*.rs" },
 ]

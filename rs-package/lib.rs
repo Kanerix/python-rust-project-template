@@ -14,10 +14,7 @@ impl Invoice {
             return Err(PyValueError::new_err("Tax must be between 0 and 1"));
         }
 
-        Ok(Invoice {
-            tax,
-            amount
-        })
+        Ok(Invoice { tax, amount })
     }
 
     pub fn total(&self) -> f64 {
